@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+body {
+	font-family: 'Inter', sans-serif;
+	background: linear-gradient(135deg, #fef7e6 0%, #f8f1e4 100%);
+	min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(135deg, #a41d28 0%, #8b1a23 100%);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(135deg, #8b1a23 0%, #6b1419 100%);
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Enhanced typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Merriweather', serif;
+	letter-spacing: 0.5px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom focus styles for accessibility */
+a:focus,
+button:focus {
+	outline: 2px solid #a41d28;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* Enhanced transitions */
+* {
+	transition: all 0.3s ease;
+}
+
+/* Custom gradient backgrounds */
+.gita-gradient {
+	background: linear-gradient(135deg, #faf5e6 0%, #f2e7c9 50%, #e8dcc0 100%);
+}
+
+.hero-gradient {
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+/* Enhanced shadows */
+.shadow-gita {
+	box-shadow:
+		0 10px 30px rgba(164, 29, 40, 0.1),
+		0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-diamond {
+	box-shadow:
+		0 8px 25px rgba(164, 29, 40, 0.15),
+		0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes pulse-gentle {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.fade-in-up {
+	animation: fadeInUp 0.8s ease-out;
+}
+
+.pulse-gentle {
+	animation: pulse-gentle 2s infinite;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+	.responsive-text {
+		font-size: clamp(1rem, 4vw, 1.5rem);
+	}
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+	.responsive-text {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+	}
+}
+
+@media (min-width: 1025px) {
+	.responsive-text {
+		font-size: clamp(2rem, 2.5vw, 3rem);
+	}
+}
