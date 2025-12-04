@@ -2,6 +2,37 @@
 
 A modern, responsive web application for exploring the Bhagavad Gita, built with SvelteKit and styled with Tailwind CSS.
 
+## 📁 Project Structure
+
+```
+frontend/
+├── src/
+│   ├── lib/
+│   │   ├── assets/          # Static assets (images, icons)
+│   │   ├── components/      # Reusable Svelte components
+│   │   └── index.js         # Library exports
+│   ├── routes/
+│   │   ├── api/
+│   │   │   └── gita/[chapter]/+server.js  # API endpoint for chapter data
+│   │   ├── gita/
+│   │   │   ├── +page.svelte               # Chapters overview page
+│   │   │   └── [chapter]/+page.svelte     # Individual chapter page
+│   │   ├── login/+page.svelte             # User login
+│   │   ├── register/+page.svelte          # User registration
+│   │   ├── dashboard/+page.svelte         # User dashboard
+│   │   ├── contact/+page.svelte           # Contact page
+│   │   └── admin/+page.svelte             # Admin panel
+│   ├── app.css            # Global styles and Tailwind imports
+│   ├── app.d.ts           # TypeScript declarations
+│   └── app.html           # Main HTML template
+├── static/                # Static files (favicon, robots.txt)
+├── package.json           # Dependencies and scripts
+├── svelte.config.js       # SvelteKit configuration
+├── vite.config.js         # Vite build configuration
+├── jsconfig.json          # JavaScript/TypeScript config
+└── tailwind.config.js     # Tailwind CSS configuration
+```
+
 ## 🌟 Features
 
 - **Interactive Chapter Display**: Browse all 18 chapters of the Bhagavad Gita in an elegant diamond-grid layout
@@ -14,41 +45,57 @@ A modern, responsive web application for exploring the Bhagavad Gita, built with
 
 ## 🚀 Tech Stack
 
-- **Framework**: SvelteKit 2.x
-- **Styling**: Tailwind CSS 4.x
-- **Build Tool**: Vite
-- **Language**: TypeScript
-- **Linting**: ESLint with Prettier
+- **Framework**: SvelteKit 2.48.5
+- **Styling**: Tailwind CSS 4.1.17
+- **Build Tool**: Vite 7.2.2
+- **Language**: TypeScript 5.9.3
+- **Linting**: ESLint 9.39.1 with Prettier 3.6.2
 - **Package Manager**: npm
+- **Additional Tools**: Svelte 5.43.8, Svelte Check 4.3.4
+
+## 🔗 API Integration
+
+The application integrates with external APIs for Bhagavad Gita content:
+
+- **Sanskrit API**: `https://sanskrit.ie/api/geeta.php` - Provides chapter and verse data
+- **Endpoint**: `/api/gita/[chapter]` - Internal API route that proxies requests to the external API
+- **Data Format**: JSON responses containing Sanskrit text, translations, and commentaries
 
 ## 📋 Prerequisites
 
 - Node.js (version 18 or higher)
 - npm or yarn
 
-## 🛠️ Installation
+## 🛠️ Installation & Setup
 
-1. Clone the repository:
+1. **Clone the repository**:
 
 ```bash
 git clone <repository-url>
 cd vows-vibe-work-svelte
 ```
 
-2. Install dependencies:
+2. **Navigate to the frontend directory**:
 
 ```bash
 cd frontend
+```
+
+3. **Install dependencies**:
+
+```bash
 npm install
 ```
 
-3. Start the development server:
+4. **Start the development server**:
 
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+5. **Open your browser** and navigate to `http://localhost:5173`
+
+The application will automatically reload when you make changes to the code.
 
 ## 📜 Available Scripts
 
@@ -77,17 +124,3 @@ npm run dev
 5. Commit your changes: `git commit -am 'Add some feature'`
 6. Push to the branch: `git push origin feature/your-feature-name`
 7. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by the timeless wisdom of the Bhagavad Gita
-- Built with modern web technologies for accessibility and performance
-- Designed to make spiritual literature more approachable in the digital age
-
----
-
-**Note**: This application is currently in development. Some features like chapter content viewing and admin functionality are still being implemented.
