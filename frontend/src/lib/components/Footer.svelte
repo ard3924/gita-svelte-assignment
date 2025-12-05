@@ -1,68 +1,28 @@
-<footer class="bg-gray-100 mt-20 pt-12 pb-6">
-	<div
-		class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12"
+<script>
+	import logo from '$lib/assets/logo.png';
+</script>
+
+<footer class="bg-[#394c3b] text-[#f3e2c4] pt-12 pb-10">
+	<div class="max-w-4xl mx-auto text-center">
+		<img src={logo} alt="Logo" class="h-16 mx-auto my-4" />
+
+		<p class="text-[24px] tracking-[0.2em]">WELLBEING~SVASTI</p>
+
+		<p class="mt-2 text-[13px]">
+			© 2025 Rutger Kortenhorst. All Rights Reserved | Design and Developed by
+		</p>
+
+		<a href="#" class="text-[13px] underline text-[#f5d68b] hover:text-white">
+			Burning Desire Inclusive
+		</a>
+	</div>
+
+	<!-- Back-to-top -->
+	<button
+		on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+		class="fixed bottom-6 right-6 h-10 w-10 bg-black/70 rounded flex justify-center items-center text-white text-xl"
+		aria-label="Back to top"
 	>
-		<!-- ABOUT -->
-		<div class="text-center sm:text-left">
-			<h3 class="text-lg sm:text-xl font-bold mb-3">WELLBEING~SVASTI</h3>
-			<p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-				This website supports learning and chanting of sacred Sanskrit texts such as the Bhagavad
-				Gita, Upanishads, and Yoga Sutras, helping practitioners experience wellbeing and clarity.
-			</p>
-		</div>
-
-		<!-- USEFUL LINKS -->
-		<div class="text-center sm:text-left">
-			<h3 class="text-lg sm:text-xl font-bold mb-3">Useful Links</h3>
-			<ul class="text-gray-600 space-y-2">
-				<li>
-					<a
-						href="#"
-						class="hover:text-blue-700 transition-colors duration-200 text-sm sm:text-base"
-						>Bhagavad Gita</a
-					>
-				</li>
-				<li>
-					<a
-						href="#"
-						class="hover:text-blue-700 transition-colors duration-200 text-sm sm:text-base"
-						>Upanishads</a
-					>
-				</li>
-				<li>
-					<a
-						href="#"
-						class="hover:text-blue-700 transition-colors duration-200 text-sm sm:text-base"
-						>Ayurveda</a
-					>
-				</li>
-				<li>
-					<a
-						href="#"
-						class="hover:text-blue-700 transition-colors duration-200 text-sm sm:text-base"
-						>Yoga Sutras</a
-					>
-				</li>
-			</ul>
-		</div>
-
-		<!-- CONTACT -->
-		<div class="text-center sm:text-left sm:col-span-2 lg:col-span-1">
-			<h3 class="text-lg sm:text-xl font-bold mb-3">Contact</h3>
-			<ul class="text-gray-600 space-y-1 text-sm sm:text-base">
-				<li>
-					Email: <a
-						href="mailto:info@sanskrit.ie"
-						class="hover:text-blue-700 transition-colors duration-200">info@sanskrit.ie</a
-					>
-				</li>
-				<li>Website by: Rutger Kortenhorst</li>
-				<li>Copyright © 2025 Sanskrit Ireland</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="border-t mt-8 sm:mt-10 pt-4 text-center text-gray-500 text-xs sm:text-sm">
-		WELLBEING~SVASTI
-	</div>
+		˄
+	</button>
 </footer>
